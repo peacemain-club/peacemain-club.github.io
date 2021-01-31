@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './assets/logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {ThemeProvider} from 'styled-components';
 
-function App(): React.FC {
+import GlobalStyle from 'configs/style';
+import routes from 'configs/routes';
+import {theme} from 'configs/style';
+
+function RouterManager(): React.ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        {
+          routes.map((route, i) => {
+            const {component, path, exact} = route;
+            return (
+              <Route
+                key={String(i)}
+                path={path}
+                component={component}
+                exact={exact}
+              />
+            );
+          })
+        }
+      </Switch>
+    </Router>
+  );
+}
+
+function App(): React.ReactElement {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <RouterManager />
+    </ThemeProvider>
   );
 }
 
