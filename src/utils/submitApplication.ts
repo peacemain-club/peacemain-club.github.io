@@ -10,7 +10,7 @@ interface Application {
   birth_year: string,
   email: string,
   is_male: boolean,
-  appliaction_statment: string,
+  application_statement: string,
   portfolio_url: string,
 }
 

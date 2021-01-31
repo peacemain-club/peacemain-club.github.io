@@ -165,6 +165,7 @@ function Apply(): React.ReactElement {
 
     submitApplication(state, (success: boolean) => {
       if (success) {
+        alert('지원이 완료되었습니다. 궁금한 점은 peacemain@kakao.com으로 문의주시기 바랍니다.');
         history.push('/');
       } else {
         alert('다시 시도해주세요.');
