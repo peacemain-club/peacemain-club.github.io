@@ -6,6 +6,7 @@ import Header from 'components/header';
 import Button from 'components/button';
 import Input from 'components/input';
 import TextArea from 'components/textarea';
+import Binary from 'components/binary';
 
 import useInput from 'utils/useInput';
 import submitApplication from 'utils/submitApplication';
@@ -87,6 +88,7 @@ const TimeworkSubtitle = styled.div`
 
 function Apply(): React.ReactElement {
   const [submit_loading, setSubmitLoading] = useState(false);
+  const [is_male, setIsMale] = useState(true);
 
   const history = useHistory();
   const TIME_END = new Date('2021.2.28 23:59:59').getTime();
@@ -99,7 +101,6 @@ function Apply(): React.ReactElement {
     phone: '',
     birth_year: '',
     email: '',
-    is_male: true,
     application_statement: '',
     portfolio_url: '',
   });
@@ -163,6 +164,10 @@ function Apply(): React.ReactElement {
 
     setSubmitLoading(true);
 
+    state.is_male = is_male;
+
+    console.log(state);
+
     submitApplication(state, (success: boolean) => {
       if (success) {
         alert('지원이 완료되었습니다. 궁금한 점은 peacemain@kakao.com으로 문의주시기 바랍니다.');
@@ -187,6 +192,8 @@ function Apply(): React.ReactElement {
           <Statement>2월 1일 ~ 2월 19일</Statement>
           <Subtitle>지원방법</Subtitle>
           <Statement>피스메인 홈페이지(peacemain-club.github.io)에서 지원</Statement>
+          <Subtitle>문의사항</Subtitle>
+          <Statement>peacemain@kakao.com으로 문의부탁드립니다.</Statement>
           <Subtitle>모집일정</Subtitle>
           <TimelineWrapper>
             <TimeWrapper>
@@ -262,6 +269,14 @@ function Apply(): React.ReactElement {
                   onChange={handleInput}
                   placeholder='예) 1998'
                   validity
+                />
+                <Binary
+                  label='성별'
+                  leftLabel='남'
+                  rightLabel='여'
+                  state={is_male}
+                  onClickLeft={() => setIsMale(true)}
+                  onClickRight={() => setIsMale(false)}
                 />
                 <Input
                   label='이메일'
