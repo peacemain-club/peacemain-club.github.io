@@ -6,7 +6,7 @@ export const theme = {
   // font sizes
 
   // responsive
-  mobile: '(max-width: 400px)',
+  mobile: '(max-width: 720px)',
   tablet: '(max-width: 1200px)',
 
   // Components
