@@ -8,7 +8,7 @@ import {theme} from 'configs/style';
 
 function RouterManager(): React.ReactElement {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         {
           routes.map((route, i) => {

@@ -166,8 +166,6 @@ function Apply(): React.ReactElement {
 
     state.is_male = is_male;
 
-    console.log(state);
-
     submitApplication(state, (success: boolean) => {
       if (success) {
         alert('지원이 완료되었습니다. 궁금한 점은 peacemain@kakao.com으로 문의주시기 바랍니다.');
