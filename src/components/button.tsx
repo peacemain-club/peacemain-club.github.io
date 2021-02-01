@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const Container = styled.button`
-  width: 120px;
+  width: 140px;
   margin: 10px;
   outline: none;
   border: none;
