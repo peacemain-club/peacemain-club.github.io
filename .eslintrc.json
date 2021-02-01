@@ -1,0 +1,32 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "google",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "camelcase": "off",
+    "new-cap": "off",
+    "require-jsdoc": "off",
+    "max-len": ["error", 90],
+    "react-hooks/exhaustive-deps": "off"
+  },
+  "ignorePatterns": ["*.config.js"]
+}
