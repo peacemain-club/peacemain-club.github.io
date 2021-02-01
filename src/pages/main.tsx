@@ -204,7 +204,7 @@ function Main(): React.ReactElement {
               <Time>2021년 6월</Time>
               <TimeWork>
                 <TimeworkTitle>제 1회 피스메인 해커톤</TimeworkTitle>
-                <TimeworkSubtitle>여름방학에 1박 2일 해커톤을 통해 만들고 싶은 하나의 IT 서비스를 개발해봅니다.</TimeworkSubtitle>
+                <TimeworkSubtitle>여름방학에 무박 2일 해커톤을 통해 만들고 싶은 하나의 IT 서비스를 개발해봅니다.</TimeworkSubtitle>
               </TimeWork>
             </TimeWrapper>
             <TimeWrapper>
