@@ -91,8 +91,6 @@ function Apply(): React.ReactElement {
   const [is_male, setIsMale] = useState(true);
 
   const history = useHistory();
-  const TIME_END = new Date('2021.2.28 23:59:59').getTime();
-  const TIME_NOW = new Date().getTime();
 
   const [state, handleInput] = useInput({
     name: '',
@@ -226,96 +224,91 @@ function Apply(): React.ReactElement {
             </TimeWrapper>
           </TimelineWrapper>
         </Section>
-        {
-          TIME_NOW < TIME_END ?
-            <>
-              <Title>지원서 작성</Title>
-              <Section>
-                <Input
-                  label='이름'
-                  name='name'
-                  value={state.name}
-                  onChange={handleInput}
-                  validity
-                />
-                <Input
-                  label='전공'
-                  name='major'
-                  value={state.major}
-                  onChange={handleInput}
-                  validity
-                />
-                <Input
-                  label='관심분야'
-                  name='interest'
-                  value={state.interest}
-                  onChange={handleInput}
-                  placeholder='예) 웹, 앱, 인공지능'
-                  validity
-                />
-                <Input
-                  label='휴대폰번호'
-                  name='phone'
-                  value={state.phone}
-                  onChange={handleInput}
-                  validity
-                />
-                <Input
-                  label='생년'
-                  name='birth_year'
-                  value={state.birth_year}
-                  onChange={handleInput}
-                  placeholder='예) 1998'
-                  validity
-                />
-                <Binary
-                  label='성별'
-                  leftLabel='남'
-                  rightLabel='여'
-                  state={is_male}
-                  onClickLeft={() => setIsMale(true)}
-                  onClickRight={() => setIsMale(false)}
-                />
-                <Input
-                  label='이메일'
-                  name='email'
-                  value={state.email}
-                  onChange={handleInput}
-                  validity
-                />
-                <TextArea
-                  label='지원 동기'
-                  name='application_statement'
-                  value={state.application_statement}
-                  onChange={handleInput}
-                  validity
-                />
-                <Input
-                  label='깃허브 링크 (선택)'
-                  name='portfolio_url'
-                  value={state.portfolio_url}
-                  onChange={handleInput}
-                  placeholder='예) https://github.com/peacemain-club'
-                  validity
-                />
-              </Section>
-              <Section>
-                <Statement>
-                  신청서를 제출할 경우,
-                  &nbsp;<Highlight {...setHightlightLink('/policy')}>개인정보처리방침</Highlight>
-                  에 동의하는 것으로 간주됩니다.
-                </Statement>
-                <Button
-                  text='지원신청'
-                  onClick={handleSubmit}
-                  loading={submit_loading}
-                />
-              </Section>
-            </> :
-            <Section>
-              <Statement>지원기간이 끝났습니다.</Statement>
-            </Section>
-        }
+        <Title>지원서 작성</Title>
+        <Section>
+          <Input
+            label='이름'
+            name='name'
+            value={state.name}
+            onChange={handleInput}
+            validity
+          />
+          <Input
+            label='전공'
+            name='major'
+            value={state.major}
+            onChange={handleInput}
+            validity
+          />
+          <Input
+            label='관심분야'
+            name='interest'
+            value={state.interest}
+            onChange={handleInput}
+            placeholder='예) 웹, 앱, 인공지능'
+            validity
+          />
+          <Input
+            label='휴대폰번호'
+            name='phone'
+            value={state.phone}
+            onChange={handleInput}
+            validity
+          />
+          <Input
+            label='생년'
+            name='birth_year'
+            value={state.birth_year}
+            onChange={handleInput}
+            placeholder='예) 1998'
+            validity
+          />
+          <Binary
+            label='성별'
+            leftLabel='남'
+            rightLabel='여'
+            state={is_male}
+            onClickLeft={() => setIsMale(true)}
+            onClickRight={() => setIsMale(false)}
+          />
+          <Input
+            label='이메일'
+            name='email'
+            value={state.email}
+            onChange={handleInput}
+            validity
+          />
+          <TextArea
+            label='지원 동기'
+            name='application_statement'
+            value={state.application_statement}
+            onChange={handleInput}
+            validity
+          />
+          <Input
+            label='깃허브 링크 (선택)'
+            name='portfolio_url'
+            value={state.portfolio_url}
+            onChange={handleInput}
+            placeholder='예) https://github.com/peacemain-club'
+            validity
+          />
+        </Section>
+        <Section>
+          <Statement>
+            신청서를 제출할 경우,
+            &nbsp;<Highlight {...setHightlightLink('/policy')}>개인정보처리방침</Highlight>
+            에 동의하는 것으로 간주됩니다.
+          </Statement>
+          <Button
+            text='지원신청'
+            onClick={handleSubmit}
+            loading={submit_loading}
+          />
+        </Section>
+        {/* <Section>
+          <Statement>지원기간이 끝났습니다.</Statement>
+        </Section> */}
       </main>
     </>
   );
