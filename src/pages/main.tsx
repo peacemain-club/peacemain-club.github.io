@@ -125,7 +125,7 @@ function Main(): React.ReactElement {
       <main className='background'>
         <Title>안녕하세요, 피스메인입니다</Title>
         <Statement>
-          <Highlight>IT서비스 개발 동아리 피스메인</Highlight>에서 새로운 회원을 모집합니다!
+          <Highlight>웹서비스 개발 동아리 피스메인</Highlight>에서 새로운 회원을 모집합니다!
         </Statement>
         <Box>
           <BoxContent>
@@ -133,12 +133,12 @@ function Main(): React.ReactElement {
             어떻게 만들 수 있을까 고민하신 분,
           </BoxContent>
           <BoxContent>
-            IT대기업(카카오, 네이버, 쿠팡 등)에<br />
+            IT 대기업(카카오, 네이버, 쿠팡 등)에<br />
             개발자로 입사하고 싶은 분,
           </BoxContent>
           <BoxContent>
             전공자, 비전공자 상관없이<br />
-            IT서비스를 만들고 싶은 분,
+            웹서비스를 만들고 싶은 분,
           </BoxContent>
           <BoxContent>
             모두 환영입니다.
@@ -147,7 +147,7 @@ function Main(): React.ReactElement {
         <Section>
           <Subtitle>어떤걸 하나요?</Subtitle>
           <Statement>
-            머리속에 아이디어로 들어있는 IT서비스를 현실로 구현하기 위해 가장 범용적인 도구인 <Highlight>웹서비스</Highlight>를 제작하는 방법을 배웁니다.
+            머리속에 아이디어로 들어있는 서비스를 현실로 구현하기 위해 가장 범용적인 도구인 <Highlight>웹서비스</Highlight>를 제작하는 방법을 배웁니다.
           </Statement>
           <Statement>
             웹서비스는 크게 <Highlight>프론트엔드와 백엔드</Highlight>로 구성되어있습니다. 프론트엔드와 백엔드 개발이 끝나면 나중에 운영을 위한 프로세스도 따로 구축해야하죠. 여기서는 일단 프론트엔드와 백엔드를 개발하는 방법을 배웁니다.
@@ -197,14 +197,14 @@ function Main(): React.ReactElement {
               <Time>2021년 5월 ~ 6월</Time>
               <TimeWork>
                 <TimeworkTitle>해커톤 기획</TimeworkTitle>
-                <TimeworkSubtitle>디자이너와 만나 팀을 구성하고 해커톤 때 개발할 IT서비스 기획을 진행합니다.</TimeworkSubtitle>
+                <TimeworkSubtitle>디자이너와 만나 팀을 구성하고 해커톤 때 개발할 웹서비스 기획을 진행합니다.</TimeworkSubtitle>
               </TimeWork>
             </TimeWrapper>
             <TimeWrapper>
               <Time>2021년 6월</Time>
               <TimeWork>
                 <TimeworkTitle>제 1회 피스메인 해커톤</TimeworkTitle>
-                <TimeworkSubtitle>여름방학에 무박 2일 해커톤을 통해 만들고 싶은 하나의 IT 서비스를 개발해봅니다.</TimeworkSubtitle>
+                <TimeworkSubtitle>여름방학에 무박 2일 해커톤을 통해 만들고 싶은 하나의 웹서비스를 개발해봅니다.</TimeworkSubtitle>
               </TimeWork>
             </TimeWrapper>
             <TimeWrapper>
@@ -217,7 +217,7 @@ function Main(): React.ReactElement {
           </TimelineWrapper>
         </Section>
         <Section height={300} alignCenter>
-          <Title alignCenter>IT서비스 같이 만들사람?</Title>
+          <Title alignCenter>웹서비스 같이 만들사람?</Title>
           <Statement>
             이 글을 읽고 가슴이 뛴다면 바로 지원하세요!
           </Statement>

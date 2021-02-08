@@ -184,7 +184,7 @@ function Apply(): React.ReactElement {
         <Section>
           <Subtitle>지원자격</Subtitle>
           <Statement>
-            그냥 배워보고 싶다가 아닌, <Highlight>난 IT서비스를 꼭 만들고 싶은</Highlight>, 경북대학교 학생
+            그냥 배워보고 싶다가 아닌, <Highlight>난 웹서비스를 꼭 만들고 싶은</Highlight>, 경북대학교 학생
           </Statement>
           <Subtitle>모집기간</Subtitle>
           <Statement>2월 1일 ~ 2월 19일</Statement>
