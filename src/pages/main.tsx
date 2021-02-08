@@ -125,7 +125,7 @@ function Main(): React.ReactElement {
       <main className='background'>
         <Title>안녕하세요, 피스메인입니다</Title>
         <Statement>
-          <Highlight>개발자 동아리 피스메인</Highlight>에서 새로운 회원을 모집합니다!
+          <Highlight>웹서비스 개발 동아리 피스메인</Highlight>에서 새로운 회원을 모집합니다!
         </Statement>
         <Box>
           <BoxContent>
@@ -197,7 +197,7 @@ function Main(): React.ReactElement {
               <Time>2021년 5월 ~ 6월</Time>
               <TimeWork>
                 <TimeworkTitle>해커톤 기획</TimeworkTitle>
-                <TimeworkSubtitle>디자이너와 만나 팀을 구성하고 해커톤 때 개발할 서비스 기획을 진행합니다.</TimeworkSubtitle>
+                <TimeworkSubtitle>디자이너와 만나 팀을 구성하고 해커톤 때 개발할 웹서비스 기획을 진행합니다.</TimeworkSubtitle>
               </TimeWork>
             </TimeWrapper>
             <TimeWrapper>
