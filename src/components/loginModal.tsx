@@ -78,7 +78,7 @@ function LoginModal(props: Props): React.ReactElement {
     login(state, (success, params) => {
       if (success) {
         setLoginLoading(false);
-        localStorage.setItem('uid', params);
+        sessionStorage.setItem('uid', params);
         handleModal();
       } else {
         setLoginLoading(false);
