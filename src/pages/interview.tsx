@@ -94,6 +94,11 @@ function Interview(): React.ReactElement {
       alert('시간을 선택해주세요.');
       return;
     }
+
+    if (!confirm(`${time_want}에 면접 신청하시겠습니까?`)) {
+      return;
+    }
+
     setSubmitLoading(true);
 
     const params = {
