@@ -57,12 +57,13 @@ const TimeBox = styled.button<{
   ${(props) => props.disabled && css`
     background-color: #bbb;
     cursor: default;
+    color: #222;
   `}
   transition: all 0.4s;
 `;
 
 function Interview(): React.ReactElement {
-  const [login_modal, setLoginModal] = useState(!localStorage.getItem('uid'));
+  const [login_modal, setLoginModal] = useState(!sessionStorage.getItem('uid'));
   const [page_loading, setPageLoading] = useState(true);
   const [time_want, setTimeWant] = useState('');
   const [submit_loading, setSubmitLoading] = useState(false);
@@ -79,7 +80,7 @@ function Interview(): React.ReactElement {
         setPageLoading(false);
       });
     }
-  }, [login_modal]);
+  }, [login_modal, setTimeWant]);
 
   const closeModal = () => {
     setLoginModal(false);
@@ -103,14 +104,21 @@ function Interview(): React.ReactElement {
 
     const params = {
       time_want,
-      uid: localStorage.getItem('uid') || '',
+      uid: sessionStorage.getItem('uid') || '',
     };
 
     submitInterviewTime(params, (success) => {
-      if (success) {
-
-      }
       setSubmitLoading(false);
+      setTimeWant('');
+      setPageLoading(true);
+      getInterviewTime((success, params) => {
+        if (success) {
+          setSchedules(params);
+        } else {
+          alert('서버 오류가 발생했습니다. 새로고침해주세요.');
+        }
+        setPageLoading(false);
+      });
     });
   };
 
