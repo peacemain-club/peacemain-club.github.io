@@ -8,11 +8,13 @@ interface InputProps {
   onChange: (e: any) => void,
   validity?: boolean,
   placeholder?: string,
+  width?: number,
 }
 
 const Container = styled.div<{
   validity?: boolean,
   focus: boolean,
+  width?: number,
 }>`
   :focus-within {
     input {
@@ -20,6 +22,10 @@ const Container = styled.div<{
     }
   }
   margin: 8px 0;
+  width: ${(props) => props.width ? `${props.width}%` : '50%'};
+  @media ${(props) => props.theme.mobile} {
+    width: 100%;
+  }
 `;
 
 const Label = styled.div`
@@ -29,16 +35,13 @@ const Label = styled.div`
 
 const Input = styled.input`
   box-sizing: border-box;
-  width: 50%;
+  width: 100%;
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 8px 12px;
   outline: none;
   font-size: 18px;
   transition: all 1s;
-  @media ${(props) => props.theme.mobile} {
-    width: 100%;
-  }
 `;
 
 function TextInput(props: InputProps): React.ReactElement {
@@ -58,6 +61,7 @@ function TextInput(props: InputProps): React.ReactElement {
       focus={is_focused}
       onClick={handleClick}
       onBlur={handleBlur}
+      width={props.width}
     >
       <Label>{props.label}</Label>
       <Input

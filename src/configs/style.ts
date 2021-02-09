@@ -44,6 +44,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  button {
+    outline: none;
+    border: none;
+    background: none;
+  }
+
   h1 {
     @media ${theme.mobile} {
       font-size: 1.7rem;
