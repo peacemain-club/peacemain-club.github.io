@@ -21,7 +21,7 @@ const routes: Array<RouteProps> = [
   {component: Main, path: MAIN, exact: true},
   {component: Apply, path: APPLY, exact: true},
   {component: Policy, path: POLICY, exact: true},
-  {component: Interview, path: INTERVIEW, exact: true},
+  // {component: Interview, path: INTERVIEW, exact: true},
   {component: _404},
 ];
 

@@ -169,7 +169,6 @@ function Apply(): React.ReactElement {
         alert('지원이 완료되었습니다. 궁금한 점은 peacemain@kakao.com으로 문의주시기 바랍니다.');
         history.push('/');
       } else {
-        alert('다시 시도해주세요.');
         setSubmitLoading(false);
       }
     });
@@ -185,7 +184,7 @@ function Apply(): React.ReactElement {
             그냥 배워보고 싶다가 아닌, <Highlight>난 웹서비스를 꼭 만들고 싶은</Highlight>, 경북대학교 학생
           </Statement>
           <Subtitle>모집기간</Subtitle>
-          <Statement>2월 1일 ~ 2월 19일</Statement>
+          <Statement>2월 1일 ~ 2월 14일 (지원자가 많은 관계로 조기 마감합니다.)</Statement>
           <Subtitle>지원방법</Subtitle>
           <Statement>피스메인 홈페이지(peacemain-club.github.io)에서 지원</Statement>
           <Subtitle>문의사항</Subtitle>
@@ -193,21 +192,21 @@ function Apply(): React.ReactElement {
           <Subtitle>모집일정</Subtitle>
           <TimelineWrapper>
             <TimeWrapper>
-              <Time>2월 1일 ~ 19일</Time>
+              <Time>2월 1일 ~ 14일</Time>
               <TimeWork>
                 <TimeworkTitle>지원서 접수</TimeworkTitle>
                 <TimeworkSubtitle>온라인으로 지원서를 접수받습니다</TimeworkSubtitle>
               </TimeWork>
             </TimeWrapper>
             <TimeWrapper>
-              <Time>2월 20일 ~ 26일</Time>
+              <Time>2월 15일 ~ 19일</Time>
               <TimeWork>
                 <TimeworkTitle>면접</TimeworkTitle>
                 <TimeworkSubtitle>끝까지 갈 사람만 뽑기위해 면접심사를 봅니다</TimeworkSubtitle>
               </TimeWork>
             </TimeWrapper>
             <TimeWrapper>
-              <Time>2월 27일</Time>
+              <Time>2월 20일</Time>
               <TimeWork>
                 <TimeworkTitle>결과 발표</TimeworkTitle>
                 <TimeworkSubtitle>이메일로 결과를 알려드립니다</TimeworkSubtitle>
