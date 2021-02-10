@@ -25,14 +25,12 @@ async function submitApplication(
       },
     };
 
-    const res = await axios.post(ENDPOINT_SUBMIT, props, request_confg);
-
-    if (res.status !== 200) {
-      throw new Error('fail to submit');
-    }
+    await axios.post(ENDPOINT_SUBMIT, props, request_confg);
 
     callback(true);
   } catch (err) {
+    const {message} = err.response.data;
+    alert(message);
     callback(false);
   }
 }
