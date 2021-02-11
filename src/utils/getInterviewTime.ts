@@ -22,14 +22,12 @@ async function getInterveiwTime(
 
     const res = await axios.get(ENDPOINT_INTERVIEW, request_confg);
 
-    if (res.status !== 200) {
-      throw new Error(res.data.message);
-    }
-
     const {schedule_list} = res.data;
 
     callback(true, schedule_list);
   } catch (err) {
+    const {message} = err.response.data;
+    alert(message);
     callback(false);
   }
 }

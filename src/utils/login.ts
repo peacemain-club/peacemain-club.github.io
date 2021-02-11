@@ -24,17 +24,12 @@ async function login(
 
     const res = await axios.get(ENDPOINT_LOGIN, request_confg);
 
-    if (res.status !== 200) {
-      const error = new Error(res.data.code);
-      error.message = res.data.message;
-      throw error;
-    }
-
     const {uid} = res.data;
 
     callback(true, uid);
   } catch (err) {
-    alert(err.message);
+    const {message} = err.response.data;
+    alert(message);
     callback(false, '');
   }
 }
