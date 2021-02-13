@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import createAccessToken from 'utils/createAccessToken';
+
 import {ENDPOINT_INTERVIEW} from 'configs/api';
 
 interface Schedule {
@@ -16,7 +18,7 @@ async function getInterveiwTime(
   try {
     const request_confg = {
       headers: {
-        'x-access-key': process.env.REACT_APP_FIREBASE_API_KEY,
+        'x-access-token': createAccessToken(),
       },
     };
 

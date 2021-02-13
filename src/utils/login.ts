@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import createAccessToken from 'utils/createAccessToken';
+
 import {ENDPOINT_LOGIN} from 'configs/api';
 
 interface Props {
@@ -14,7 +16,7 @@ async function login(
   try {
     const request_confg = {
       headers: {
-        'x-access-key': process.env.REACT_APP_FIREBASE_API_KEY,
+        'x-access-token': createAccessToken(),
       },
       params: {
         name: params.name,

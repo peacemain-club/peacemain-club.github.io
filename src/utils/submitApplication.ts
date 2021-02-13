@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import createAccessToken from 'utils/createAccessToken';
+
 import {ENDPOINT_SUBMIT} from 'configs/api';
 
 interface Application {
@@ -21,7 +23,7 @@ async function submitApplication(
   try {
     const request_confg = {
       headers: {
-        'x-access-key': process.env.REACT_APP_FIREBASE_API_KEY,
+        'x-access-token': createAccessToken(),
       },
     };
 
