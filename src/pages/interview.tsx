@@ -133,7 +133,7 @@ function Interview(): React.ReactElement {
       <Header />
       <main className='background'>
         <Title>면접시간 선택</Title>
-        <Subtitle>면접장소 : 경북대학교 북문 파스쿠치</Subtitle>
+        <Subtitle>면접장소 : 경북대학교 북문 HAVANA Express(대구 북구 대학로 17길 6)</Subtitle>
         <Statement>가능한 시간이 없을 경우 peacemain@kakao.com으로 연락주세요.</Statement>
         {
           !login_modal &&

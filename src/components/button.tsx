@@ -4,7 +4,7 @@ import ClipLoader from 'react-spinners/ClipLoader';
 
 interface ButtonProps {
   text: string,
-  onClick: () => void,
+  onClick?: () => void,
   loading?: boolean,
 }
 
