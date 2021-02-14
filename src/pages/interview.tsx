@@ -13,6 +13,7 @@ interface Schedule {
   available_time: Array<{
     time: string,
     is_available: boolean,
+    uid?: string,
   }>
 }
 
@@ -42,6 +43,7 @@ const DateWrapper = styled.div`
 const TimeBox = styled.button<{
   selected: boolean,
   disabled: boolean,
+  reserved: boolean,
 }>`
   border-radius: 10px;
   text-align: center;
@@ -58,6 +60,11 @@ const TimeBox = styled.button<{
     background-color: #bbb;
     cursor: default;
     color: #222;
+  `}
+  ${(props) => props.reserved && css`
+    background-color: #9dceff;
+    cursor: default;
+    color: white;
   `}
   transition: all 0.4s;
 `;
@@ -108,6 +115,9 @@ function Interview(): React.ReactElement {
     };
 
     submitInterviewTime(params, (success) => {
+      if (success) {
+        alert('신청에 성공했습니다. 면접때 뵙겠습니다.');
+      }
       setSubmitLoading(false);
       setTimeWant('');
       setPageLoading(true);
@@ -148,7 +158,7 @@ function Interview(): React.ReactElement {
                       <DateWrapper>
                         {
                           available_time.map((v, j) => {
-                            const {time, is_available} = v;
+                            const {time, is_available, uid} = v;
                             const is_checked = time_want === `${date} ${time}`;
                             return (
                               <TimeBox
@@ -156,6 +166,7 @@ function Interview(): React.ReactElement {
                                 key={String(j)}
                                 onClick={handleTimeWant(date, time)}
                                 disabled={!is_available}
+                                reserved={uid === sessionStorage.getItem('uid')}
                               >
                                 {time}
                               </TimeBox>
