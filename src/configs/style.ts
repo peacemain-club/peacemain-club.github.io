@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
   .background {
     width: 700px;
-    padding: 15px 20px;
+    padding: 24px 20px ;
     @media ${theme.mobile} {
       width: 350px
     }
@@ -85,6 +85,14 @@ const GlobalStyle = createGlobalStyle`
     @media ${theme.mobile} {
       font-size: 1rem;
     }
+  }
+  input {
+    border: none;
+    outline: none;
+  }
+  a {
+    text-decoration: none;
+    color: #222222;
   }
 `;
 

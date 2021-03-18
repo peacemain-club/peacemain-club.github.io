@@ -4,12 +4,16 @@ import Main from 'pages/main';
 import Apply from 'pages/apply';
 import Policy from 'pages/policy';
 import Interview from 'pages/interview';
+import Meet from 'pages/meet';
+import Auth from 'pages/auth';
 import _404 from 'pages/404';
 
 export const MAIN = '/';
 export const APPLY = '/apply';
 export const POLICY = '/policy';
 export const INTERVIEW = '/interview';
+export const MEET = '/meet';
+export const AUTH = '/login';
 
 interface RouteProps {
   component: React.FC,
@@ -22,6 +26,8 @@ const routes: Array<RouteProps> = [
   {component: Apply, path: APPLY, exact: true},
   {component: Policy, path: POLICY, exact: true},
   {component: Interview, path: INTERVIEW, exact: true},
+  {component: Auth, path: AUTH, exact: true},
+  {component: Meet, path: MEET, exact: true},
   {component: _404},
 ];
 

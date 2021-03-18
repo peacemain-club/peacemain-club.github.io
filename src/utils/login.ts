@@ -1,38 +1,30 @@
-import axios from 'axios';
-
-import createAccessToken from 'utils/createAccessToken';
-
-import {ENDPOINT_LOGIN} from 'configs/api';
-
-interface Props {
-  name: string,
-  phone: string,
-}
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 async function login(
-  params: Props,
-  callback: (success: boolean, params: string) => void
+  email: string,
+  password: string,
+  callback: (success: boolean, params?: string) => void,
 ): Promise<void> {
   try {
-    const request_confg = {
-      headers: {
-        'x-access-token': createAccessToken(),
-      },
-      params: {
-        name: params.name,
-        phone: params.phone,
-      },
-    };
-
-    const res = await axios.get(ENDPOINT_LOGIN, request_confg);
-
-    const {uid} = res.data;
-
-    callback(true, uid);
+    await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
+    await firebase.auth().signInWithEmailAndPassword(email, password);
+    callback(true);
   } catch (err) {
-    const {message} = err.response.data;
-    alert(message);
-    callback(false, '');
+    let message = '';
+
+    switch (err.code) {
+    case 'auth/wrong-password':
+      message = '잘못된 비밀번호입니다.';
+      break;
+    case 'auth/user-not-found':
+      message = '잘못된 비밀번호입니다.';
+      break;
+    default:
+      message = '오류가 발생했습니다.';
+    }
+
+    callback(false, message);
   }
 }
 

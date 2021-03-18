@@ -5,7 +5,7 @@ import Input from 'components/input';
 import Button from 'components/button';
 
 import useInput from 'utils/useInput';
-import login from 'utils/login';
+import login from 'utils/applicantLogin';
 import checkPhone from 'utils/checkPhone';
 
 interface Props {
