@@ -1,0 +1,35 @@
+{
+  "name": "peacemain-club-backend",
+  "description": "peacemain-club-backend",
+  "version": "1.1.0",
+  "scripts": {
+    "lint": "eslint .",
+    "predeploy": "yarn lint",
+    "serve": "npx functions-framework --target=",
+    "start": "npm run shell",
+    "deploy": "gcloud functions deploy api --entry-point api --runtime nodejs12 --trigger-http --region=asia-northeast2",
+    "logs": "gcloud functions logs read"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^4.8.1",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@google-cloud/functions-framework": "^1.7.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-promise": "^4.0.1"
+  },
+  "private": true
+}
