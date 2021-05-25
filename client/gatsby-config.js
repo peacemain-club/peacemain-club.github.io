@@ -15,7 +15,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: '피스메인',
+        short_name: '피스메인',
+        start_url: '/',
+        background_color: '242529',
+        theme_color: '#C2C2C2',
+        icon: 'src/images/favicon.png',
       },
     },
     "gatsby-plugin-mdx",

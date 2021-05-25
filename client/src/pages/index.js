@@ -1,7 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-import Header from '../components/Header';
+import Layout from '../components/layout';
 
 const Main = styled.main`
 
@@ -9,10 +8,11 @@ const Main = styled.main`
 
 const IndexPage = () => {
   return (
-    <Main>
-      <Header />
-    </Main>
-  )
+    <Layout>
+      <Main>
+      </Main>
+    </Layout>
+  );
 }
 
 export default IndexPage;
