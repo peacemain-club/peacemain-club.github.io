@@ -33,10 +33,17 @@ const GlobalStyle = createGlobalStyle`
 
   div {
     box-sizing: border-box;
+    color: ${(props) => props.theme.MAIN_COLOR};
   }
 
   header {
     box-sizing: border-box;
+  }
+
+  a {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: ${(props) => props.theme.MAIN_COLOR};
   }
 `;
 

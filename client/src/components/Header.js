@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'gatsby';
 
 import logo from '../images/logo.png';
 
@@ -23,8 +24,16 @@ const ButtonWrapper = styled.div`
   padding: 0 30px;
 `;
 
-const Anchor = styled.a`
-  color: ${props => props.theme.MAIN_COLOR};
+const Anchor = styled.div`
+  a {
+    color: ${props => props.theme.MAIN_COLOR};
+    padding: 4px;
+  }
+
+  .active {
+    border-bottom: 2px solid ${props => props.theme.MAIN_COLOR};
+    font-weight: bold;
+  }
 `;
 
 const _Header = () => {
@@ -32,9 +41,15 @@ const _Header = () => {
     <Header>
       <Logo src={logo} alt='peacemain' />
       <ButtonWrapper>
-        <Anchor>PEACEMAIN?</Anchor>
-        <Anchor>공고</Anchor>
-        <Anchor>내 지원서</Anchor>
+        <Anchor>
+          <Link to='/' activeClassName='active'>PEACEMAIN?</Link>
+        </Anchor>
+        <Anchor>
+          <Link to='/notice' activeClassName='active'>공고</Link>
+        </Anchor>
+        <Anchor>
+          <Link to='/myApplication' activeClassName='active'>내 지원서</Link>
+        </Anchor>
       </ButtonWrapper>
     </Header>
   );
