@@ -7,18 +7,18 @@ const Main = styled.main`
   width: 800px;
 `;
 
-const IndexPage = () => {
+const MyAppliactionPage = () => {
   return (
     <Layout>
       <Helmet>
         <meta charSet='utf-8' />
-        <title>피스메인</title>
+        <title>피스메인 | 내 지원서</title>
       </Helmet>
       <Main>
-        안녕하세요
+        내 지원서
       </Main>
     </Layout>
   );
 }
 
-export default IndexPage;
+export default MyAppliactionPage;

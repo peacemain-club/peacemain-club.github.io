@@ -1,20 +1,26 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
+import styled from 'styled-components';
 
 import Header from '../components/header';
 
 import Theme from '../configs/theme';
 
+const Wrap = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+`;
+
 const Layout = ({children}) => {
   return (
     <React.Fragment>
       <Theme>
-        <Helmet>
-          <meta charSet='utf-8' />
-          <title>피스메인 동아리</title>
-        </Helmet>
         <Header />
-        {children}
+        <Wrap>
+          {children}
+        </Wrap>
       </Theme>
     </React.Fragment>
   );
