@@ -14,7 +14,9 @@
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "styled-reset": "^4.3.4",
+    "styled-sanitize": "^1.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.23",

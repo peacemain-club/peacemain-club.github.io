@@ -1,10 +1,8 @@
 import {createGlobalStyle} from 'styled-components';
+import reset from 'styled-reset';
+import sanitize from 'styled-sanitize';
 
 import type {DefaultTheme} from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-
-`;
 
 export const theme: DefaultTheme = {
   break_points: {
@@ -47,5 +45,37 @@ export const theme: DefaultTheme = {
     R375: '3.75rem',
   },
 };
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  ${sanitize}
+
+  * { box-sizing: border-box }
+
+  #root {
+    width: 100%;
+    height: 100vh;
+    font-family: "Noto Sans KR", sans-serif;
+    color: ${theme.color.BLACK};
+  }
+
+  a {
+    color: ${theme.color.BLACK};
+    text-decoration: none;
+  }
+  
+  input, button, textarea {
+    font-family: "Noto Sans KR", sans-serif;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: ${theme.color.BLACK};
+  }
+  
+  button {
+    cursor: pointer;
+  }
+`;
 
 export default GlobalStyle;
