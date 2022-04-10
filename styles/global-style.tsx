@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${theme.color.BLACK};
     text-decoration: none;
+    cursor: pointer;
   }
   
   input, button, textarea {
