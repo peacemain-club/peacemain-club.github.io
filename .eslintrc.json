@@ -1,7 +1,7 @@
 {
   "extends": ["google", "next/core-web-vitals", "prettier"],
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 2, {"SwitchCase": 1}],
     "camelcase": "off",
     "new-cap": "off",
     "require-jsdoc": "off",
