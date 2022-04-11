@@ -10,7 +10,9 @@ declare module 'styled-components' {
     color: {
       RED: string;
       BLACK: string;
+      GREY: string;
       GRADIENT_1: string;
+      GRADIENT_1_TEXT: string;
     };
     template: {
       PAGE: string;

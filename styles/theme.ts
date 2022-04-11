@@ -9,7 +9,14 @@ const theme: DefaultTheme = {
   color: {
     RED: '#FF0000',
     BLACK: '#333333',
+    GREY: '#C4C4C4',
     GRADIENT_1: 'linear-gradient(90deg, rgba(0, 71, 255, 0.58) 0%, rgba(0, 172, 59, 0.58) 100%)',
+    GRADIENT_1_TEXT: `
+      background: linear-gradient(90deg, rgba(0, 71, 255, 0.58) 0%, rgba(0, 172, 59, 0.58) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    `,
   },
   template: {
     PAGE: `
