@@ -4,7 +4,7 @@ import Link from 'next/link';
 import NavButton from 'components/nav-button';
 
 import * as S from './style';
-import peacemain_icon from 'assets/images/peacemain.svg';
+import peacemain_icon from 'public/assets/images/peacemain.svg';
 
 import type {NextComponentType} from 'next';
 

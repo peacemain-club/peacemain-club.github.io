@@ -12,6 +12,11 @@ export const Container = styled.header`
   padding: 0 52px;
 
   position: absolute;
+
+  ${({theme}) => theme.break_points.MOBILE} {
+    width: 100vw;
+    padding: 0 20px;
+  }
 `;
 
 export const Logo = styled.div`
@@ -22,6 +27,10 @@ export const NavButtonGroup = styled.ul`
   display: flex;
   flex-direction: row;
   column-gap: 36px;
+
+  ${({theme}) => theme.break_points.MOBILE} {
+    column-gap: 16px;
+  }
 `;
 
 export const NavButtonWrapper = styled.li``;
