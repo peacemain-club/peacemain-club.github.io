@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   * { box-sizing: border-box }
 
-  #root {
+  #__next {
     width: 100%;
     height: 100vh;
     font-family: "Noto Sans KR", sans-serif;
