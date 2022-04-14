@@ -19,10 +19,13 @@ declare module 'styled-components' {
       MAIN: string;
     };
     font_size: {
+      R75: string;
       R100: string;
       R125: string;
+      R150: string;
       R175: string;
       R200: string;
+      R250: string;
       R300: string;
       R375: string;
     };

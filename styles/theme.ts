@@ -40,10 +40,13 @@ const theme: DefaultTheme = {
     `,
   },
   font_size: {
+    R75: '0.75rem',
     R100: '1rem',
     R125: '1.25rem',
+    R150: '1.5rem',
     R175: '1.75rem',
     R200: '2rem',
+    R250: '2.5rem',
     R300: '3rem',
     R375: '3.75rem',
   },
