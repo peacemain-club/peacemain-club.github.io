@@ -3,8 +3,8 @@ import type {DefaultTheme} from 'styled-components';
 const theme: DefaultTheme = {
   break_points: {
     MOBILE: '@media all and (max-width: 480px)',
-    TABLET: '@media all and (min-width:480px) and (max-width:1200px)',
-    LAPTOP: '@media all and (min-width: 1200px)',
+    TABLET: '@media all and (min-width:480px) and (max-width:920px)',
+    LAPTOP: '@media all and (min-width: 920px)',
   },
   color: {
     RED: '#FF0000',
