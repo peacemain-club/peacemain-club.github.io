@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+export const Container = styled.footer`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   height: 60px;
-  width: 100vw;
+  width: 100%;
 
   padding: 0 52px;
 
