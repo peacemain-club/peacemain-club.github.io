@@ -11,7 +11,8 @@ const GlobalStyle = createGlobalStyle`
   * { box-sizing: border-box }
 
   #__next {
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: 100vh;
     font-family: "Noto Sans KR", sans-serif;
     color: ${theme.color.BLACK};
