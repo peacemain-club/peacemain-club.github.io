@@ -29,6 +29,13 @@ export const NavTabButton = styled.button<NavTabButton>`
       font-weight: bold;
       text-decoration: underline;
     `}
+
+  ${({theme}) => theme.break_points.TABLET} {
+    font-size: ${({theme}) => theme.font_size.R125};
+  }
+  ${({theme}) => theme.break_points.MOBILE} {
+    font-size: ${({theme}) => theme.font_size.R125};
+  }
 `;
 
 // Tab Element
