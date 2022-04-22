@@ -55,10 +55,48 @@ export const MainSectionSubtitle = styled.h6`
 export const MainSectionText = styled.p``;
 
 export const MainSectionList = styled.ul`
-  line-height: 20px;
+  line-height: 24px;
 `;
 
 export const MainSectionListItem = styled.li`
   list-style-type: disc;
   list-style-position: inside;
+`;
+
+// Position Description
+export const PDWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 24px;
+`;
+
+export const PDHeader = styled.h3`
+  font-size: ${({theme}) => theme.font_size.R175};
+  font-weight: bold;
+  ${({theme}) => theme.color.GRADIENT_1_TEXT}
+
+  width: fit-content;
+`;
+
+export const PDTitle = styled.h6`
+  font-size: ${({theme}) => theme.font_size.R125};
+  font-weight: bold;
+`;
+
+export const PDText = styled.p``;
+
+export const PDBulletList = styled.ul`
+  line-height: 24px;
+`;
+
+export const PDBulletListElement = styled.li`
+  list-style-type: disc;
+  list-style-position: inside;
+`;
+
+export const PDLink = styled.a`
+  font-size: ${({theme}) => theme.font_size.R125};
+  font-weight: bold;
+  text-decoration: underline;
 `;
