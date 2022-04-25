@@ -12,7 +12,7 @@ const Third: NextPage = () => {
     <Layout>
       <S.Page>
         <S.BannerSection>
-          <ThirdBanner />
+          <ThirdBanner link />
         </S.BannerSection>
         <S.Main>
           <S.MainSection>
