@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-export const Button = styled.a<{is_active: boolean; variant: 'large' | 'small'}>`
+export const Button = styled.button<{is_active: boolean; variant: 'large' | 'small'}>`
   display: flex;
   flex-direction: row;
   justify-content: center;

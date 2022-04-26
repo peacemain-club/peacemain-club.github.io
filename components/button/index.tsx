@@ -1,9 +1,10 @@
 import * as S from './style';
 
-interface Props {
+import type {ButtonHTMLAttributes} from 'react';
+
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   variant: 'large' | 'small';
-  onClick: () => void;
 }
 
 function Button({text, variant, onClick}: Props) {
