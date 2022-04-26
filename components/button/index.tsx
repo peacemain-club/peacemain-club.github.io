@@ -5,14 +5,13 @@ import type {ButtonHTMLAttributes} from 'react';
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   variant: 'large' | 'small';
+  is_active?: boolean;
 }
 
-function Button({text, variant, onClick}: Props) {
-  const is_active = true;
-
+function Button(props: Props) {
   return (
-    <S.Button onClick={onClick} variant={variant} is_active={is_active}>
-      {text}
+    <S.Button {...props} variant={props.variant} is_active={props.is_active || true}>
+      {props.text}
     </S.Button>
   );
 }
