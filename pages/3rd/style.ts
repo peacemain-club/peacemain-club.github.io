@@ -42,6 +42,7 @@ export const MainSectionTitleWrapper = styled.div`
 export const MainSectionTitle = styled.h2`
   font-size: ${({theme}) => theme.font_size.R300};
   font-weight: 100;
+  margin-bottom: 12px;
 
   ${({theme}) => theme.break_points.MOBILE} {
     font-size: ${({theme}) => theme.font_size.R200};
