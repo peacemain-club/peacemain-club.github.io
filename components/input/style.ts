@@ -10,6 +10,13 @@ export const Container = styled.div`
 
   &:focus-within label {
     transform: translate(0, 0px) scale(0.75);
+
+    font-weight: bold;
+    ${({theme}) => theme.color.GRADIENT_1_TEXT}
+  }
+  &:focus-within input {
+    border-width: 3px;
+    border-image: ${({theme}) => theme.color.GRADIENT_1} 1;
   }
 `;
 
