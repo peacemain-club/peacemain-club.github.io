@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             <S.OnboardDateText>4.25 - 5.1 18:00</S.OnboardDateText>
             <S.OnboardText>개발자로 가는 길에 가속 페달을 밟고 싶다면</S.OnboardText>
             <S.OnboardText>누구보다 열심히 할 자신이 있다면</S.OnboardText>
-            <Button text="지원하기" type="large" onClick={handleNavToApply} />
+            <Button text="지원하기" variant="large" onClick={handleNavToApply} />
             <S.DownArrowWrapper>
               <Image src={down_arrow_icon} alt="scroll to down" />
               SCROLL
