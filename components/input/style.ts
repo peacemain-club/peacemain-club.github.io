@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{isError: boolean}>`
   display: flex;
   flex-direction: column;
 
@@ -47,4 +47,14 @@ export const Label = styled.label<{isActive: boolean}>`
     css`
       transform: translate(0, 0) scale(0.75);
     `}
+`;
+
+export const ErrorMessage = styled.div`
+  position: absolute;
+  bottom: -4px;
+
+  transform: translateY(100%);
+
+  color: ${({theme}) => theme.color.RED};
+  font-size: ${({theme}) => theme.font_size.R75};
 `;
