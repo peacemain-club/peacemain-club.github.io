@@ -12,6 +12,8 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 36px;
 `;
 
 export const BannerSection = styled.section``;
