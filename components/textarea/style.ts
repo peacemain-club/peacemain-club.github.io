@@ -15,6 +15,7 @@ export const Container = styled.div<{isError: boolean}>`
 
 export const Field = styled.textarea`
   width: 100%;
+  min-height: 300px;
 
   padding: 24px;
   border: 2px solid ${({theme}) => theme.color.GREY};
