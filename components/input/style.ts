@@ -18,6 +18,10 @@ export const Container = styled.div<{isError: boolean}>`
     border-width: 3px;
     border-image: ${({theme}) => theme.color.GRADIENT_1} 1;
   }
+
+  ${({theme}) => theme.break_points.MOBILE} {
+    width: 100%;
+  }
 `;
 
 export const Field = styled.input`
@@ -36,7 +40,7 @@ export const Field = styled.input`
 export const Label = styled.label<{isActive: boolean}>`
   position: absolute;
 
-  color: ${({theme}) => theme.color.GREY};
+  color: ${({theme}) => theme.color.BLACK};
 
   transform: translate(0, 24px) scale(1);
   transform-origin: top left;
