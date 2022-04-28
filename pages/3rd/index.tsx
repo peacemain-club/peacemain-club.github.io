@@ -80,6 +80,7 @@ const Third: NextPage = () => {
                   </S.PDBulletList>
                   <S.PDText>이런 분이라면 우대해드립니다.</S.PDText>
                   <S.PDBulletList>
+                    <S.PDBulletListElement>프론트엔드, 서버 모두 할 수 있는 분</S.PDBulletListElement>
                     <S.PDBulletListElement>이미 서비스를 개발해보신 분</S.PDBulletListElement>
                   </S.PDBulletList>
                 </S.PDWrapper>
