@@ -7,7 +7,6 @@ export const Container = styled.div<{isError: boolean}>`
   width: 100%;
 
   position: relative;
-  margin-bottom: 24px;
 `;
 
 export const RadioGroup = styled.div`
