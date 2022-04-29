@@ -9,6 +9,10 @@ export const Button = styled.button<{is_active: boolean; variant: 'large' | 'sma
   color: white;
   background: ${({theme, is_active}) => (is_active ? theme.color.GRADIENT_1 : theme.color.GREY)};
 
+  &:disabled {
+    cursor: wait;
+  }
+
   ${({variant, theme}) => {
     switch (variant) {
       case 'large':
