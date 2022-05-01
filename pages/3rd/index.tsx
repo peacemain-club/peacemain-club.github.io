@@ -1,13 +1,22 @@
-import type {NextPage} from 'next';
+import {useRouter} from 'next/router';
 
 import Layout from 'components/layout';
 import ThirdBanner from 'components/banners/3rd-banner';
 import TabList from 'components/tab-list';
 import Schedule from 'components/schedule';
+import Button from 'components/button';
 
 import * as S from './style';
 
+import type {NextPage} from 'next';
+
 const Third: NextPage = () => {
+  const router = useRouter();
+
+  const handleNavToApply = () => {
+    router.push('/apply');
+  };
+
   return (
     <Layout>
       <S.Page>
@@ -150,6 +159,7 @@ const Third: NextPage = () => {
             </S.MainSectionTitleWrapper>
             <S.MainSectionText>peacemain@kakao.com으로 문의바랍니다.</S.MainSectionText>
           </S.MainSection>
+          <Button text="지원서 작성하기" variant="large" onClick={handleNavToApply} />
         </S.Main>
       </S.Page>
     </Layout>
