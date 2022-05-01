@@ -1,12 +1,19 @@
 import Layout from 'components/layout';
 import ThirdBanner from 'components/banners/3rd-banner';
-import ApplyForm from 'components/forms/apply';
+import Button from 'components/button';
 
 import * as S from './style';
 
 import type {NextPage} from 'next';
+import {useRouter} from 'next/router';
 
 const Apply: NextPage = () => {
+  const router = useRouter();
+
+  const handleNav = (to: string) => () => {
+    router.push(to);
+  };
+
   return (
     <Layout>
       <S.Page>
@@ -14,13 +21,10 @@ const Apply: NextPage = () => {
           <ThirdBanner />
         </S.BannerSection>
         <S.Main>
-          <S.MainSection>
-            <S.MainSectionTitleWrapper>
-              <S.MainSectionTitle>지원하기</S.MainSectionTitle>
-              <S.MainSectionSubtitle>지원서 수정은 이메일로 문의부탁드립니다.</S.MainSectionSubtitle>
-            </S.MainSectionTitleWrapper>
-            <ApplyForm />
-          </S.MainSection>
+          <S.NavWrapper>
+            <Button text="지원서 작성" variant="large" onClick={handleNav('apply/form')} />
+            <Button text="면접일정 수정" variant="large" onClick={handleNav('interview')} />
+          </S.NavWrapper>
         </S.Main>
       </S.Page>
     </Layout>
