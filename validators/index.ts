@@ -19,3 +19,12 @@ export const apply_schema = yup.object({
     .max(1000, '자기소개는 1000자를 넘기지 말아주세요.')
     .required('자기소개를 입력해주세요.'),
 });
+
+export const auth_schema = yup.object({
+  name: yup
+    .string()
+    .matches(/^[가-힣]+$/gi, '올바른 이름을 입력해주세요.')
+    .min(2, '이름은 2자 이상 입력해주세요.')
+    .required('이름을 입력해주세요.'),
+  email: yup.string().email('올바른 이메일을 입력해주세요.').required('이메일을 입력해주세요.'),
+});
