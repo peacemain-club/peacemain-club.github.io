@@ -18,6 +18,7 @@ export const apply_schema = yup.object({
     .min(50, '자기소개는 50자 이상 입력해주세요.')
     .max(1000, '자기소개는 1000자를 넘기지 말아주세요.')
     .required('자기소개를 입력해주세요.'),
+  is_term_agreed: yup.array().min(1, '개인정보처리방침에 동의해주세요.'),
 });
 
 export const auth_schema = yup.object({
