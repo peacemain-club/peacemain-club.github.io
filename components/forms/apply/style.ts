@@ -11,3 +11,25 @@ export const Container = styled.form`
     align-self: center;
   }
 `;
+
+export const TermStatement = styled.div``;
+
+export const Link = styled.a`
+  ${({theme}) => theme.color.GRADIENT_1_TEXT}
+
+  position: relative;
+
+  font-weight: bold;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    left: 0;
+
+    height: 2px;
+
+    border-radius: 2px;
+    background: ${({theme}) => theme.color.GRADIENT_1};
+  }
+`;

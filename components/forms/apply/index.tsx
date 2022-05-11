@@ -1,13 +1,28 @@
 import {useFormik} from 'formik';
+import Link from 'next/link';
 
 import Button from 'components/button';
 import Input from 'components/input';
+import TextArea from 'components/textarea';
+import Radio from 'components/radio';
+import Checkbox from 'components/checkbox';
 
 import {apply_schema} from 'validators';
 
 import * as S from './style';
-import TextArea from 'components/textarea';
-import Radio from 'components/radio';
+
+const PRIVACY_TERM_URL = 'https://aaa.com';
+
+function TermStatement() {
+  return (
+    <S.TermStatement>
+      <Link href={PRIVACY_TERM_URL} passHref>
+        <S.Link>개인정보처리방침</S.Link>
+      </Link>
+      에 동의합니다.
+    </S.TermStatement>
+  );
+}
 
 function Apply() {
   const formik = useFormik({
@@ -17,10 +32,13 @@ function Apply() {
       major: '',
       position: '',
       statement: '',
+      is_term_agreed: [],
     },
     validationSchema: apply_schema,
     onSubmit: data => {
-      console.log(data);
+      if (data.is_term_agreed) {
+        console.log(data);
+      }
     },
   });
 
@@ -74,6 +92,16 @@ function Apply() {
           onChange={formik.handleChange}
           error={formik.touched.statement && Boolean(formik.errors.statement)}
           helperText={formik.touched.statement && formik.errors.statement}
+        />
+        <Checkbox
+          id="is_term_agreed"
+          name="is_term_agreed"
+          label={<TermStatement />}
+          placeholder="개인정보처리방침에 동의가 필요합니다."
+          value="1"
+          onChange={formik.handleChange}
+          error={formik.touched.is_term_agreed && Boolean(formik.errors.is_term_agreed)}
+          helperText={formik.touched.is_term_agreed && '개인정보처리방침에 동의해주세요.'}
         />
         <Button text="지원하기" variant="large" type="submit" />
       </>
