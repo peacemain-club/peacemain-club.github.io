@@ -12,7 +12,8 @@ function Checkbox(props: CheckboxProps) {
   return (
     <S.CheckboxContainer>
       <S.Label htmlFor={props.id}>
-        <S.Checkbox {...props} type="checkbox" />
+        <S.CheckboxInput {...props} type="checkbox" />
+        <S.Checkbox htmlFor={props.id} />
         {props.label}
       </S.Label>
       {props.error && <S.ErrorMessage>{props.helperText}</S.ErrorMessage>}
