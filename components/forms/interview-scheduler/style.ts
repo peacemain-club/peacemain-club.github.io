@@ -1,8 +1,9 @@
 import styled, {css} from 'styled-components';
 
 interface TimeTableRowItem {
-  selected?: boolean;
+  isSelected?: boolean;
   isMine?: boolean;
+  isReserved?: boolean;
 }
 
 export const Container = styled.div`
@@ -55,13 +56,15 @@ export const TimeTableRowItem = styled.button<TimeTableRowItem>`
 
   border: 2px solid ${({theme}) => theme.color.GREY};
 
-  ${({selected}) =>
-    selected &&
+  ${({isSelected}) =>
+    isSelected &&
     css`
       border-image: ${({theme}) => theme.color.GRADIENT_1} 1;
 
       ${({theme}) => theme.color.GRADIENT_1_TEXT}
+      font-weight: bold;
     `}
+
   ${({isMine}) =>
     isMine &&
     css`
@@ -77,5 +80,7 @@ export const TimeTableRowItem = styled.button<TimeTableRowItem>`
     background-color: ${({theme}) => theme.color.GREY};
 
     color: white;
+
+    cursor: not-allowed;
   }
 `;
