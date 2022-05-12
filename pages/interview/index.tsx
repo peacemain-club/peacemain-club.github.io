@@ -20,8 +20,34 @@ const Apply: NextPage = () => {
 
   const schedule: Schedule[] = [
     {
-      title: '5월 9일(월)',
-      times: [{time: '12:00'}],
+      date: '20220509',
+      times: [
+        {time: '2022-05-09T10:00:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-09T10:30:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-09T11:00:00.000Z', isReserved: true, isMine: true},
+        {time: '2022-05-09T11:30:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-09T12:00:00.000Z', isReserved: true, isMine: false},
+      ],
+    },
+    {
+      date: '20220510',
+      times: [
+        {time: '2022-05-10T10:00:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-10T10:30:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-10T11:00:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-10T11:30:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-10T12:00:00.000Z', isReserved: false, isMine: false},
+      ],
+    },
+    {
+      date: '20220511',
+      times: [
+        {time: '2022-05-11T10:00:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-11T10:30:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-11T11:00:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-11T11:30:00.000Z', isReserved: false, isMine: false},
+        {time: '2022-05-11T12:00:00.000Z', isReserved: false, isMine: false},
+      ],
     },
   ];
 
