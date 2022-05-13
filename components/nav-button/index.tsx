@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 import * as S from './style';
@@ -13,9 +14,9 @@ function NavButton({text, href}: Props) {
   const is_active = router.asPath === href;
 
   return (
-    <S.NavButton href={href} is_active={is_active}>
-      {text}
-    </S.NavButton>
+    <Link href={href} passHref>
+      <S.NavButton is_active={is_active}>{text}</S.NavButton>
+    </Link>
   );
 }
 

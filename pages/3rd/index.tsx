@@ -154,7 +154,9 @@ const Third: NextPage = () => {
             <S.MainSectionText>peacemain@kakao.com으로 문의바랍니다.</S.MainSectionText>
           </S.MainSection>
           <Link href="/apply" passHref>
-            <Button text="지원서 작성하기" variant="large" />
+            <a>
+              <Button text="지원서 작성하기" variant="large" />
+            </a>
           </Link>
         </S.Main>
       </S.Page>

@@ -18,10 +18,14 @@ const Apply: NextPage = () => {
         <S.Main>
           <S.NavWrapper>
             <Link href="/apply/form" passHref>
-              <Button text="지원서 작성" variant="large" />
+              <a>
+                <Button text="지원서 작성" variant="large" />
+              </a>
             </Link>
             <Link href="/interview" passHref>
-              <Button text="면접일정 수정" variant="large" />
+              <a>
+                <Button text="면접일정 수정" variant="large" />
+              </a>
             </Link>
           </S.NavWrapper>
         </S.Main>

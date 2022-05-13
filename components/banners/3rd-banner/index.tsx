@@ -16,7 +16,9 @@ function ThirdBanner({link}: ThirdBannerProps) {
       <S.BannerTime>5.16 - 5.21 18:00</S.BannerTime>
       {link && (
         <Link href="/apply" passHref>
-          <Button text="지원서 작성하기" variant="large" />
+          <a>
+            <Button text="지원서 작성하기" variant="large" />
+          </a>
         </Link>
       )}
     </S.BannerWrapper>

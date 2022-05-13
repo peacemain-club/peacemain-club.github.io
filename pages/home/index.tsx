@@ -23,7 +23,9 @@ const Home: NextPage = () => {
             <S.OnboardText>개발자로 가는 길에 가속 페달을 밟고 싶다면</S.OnboardText>
             <S.OnboardText>누구보다 열심히 할 자신이 있다면</S.OnboardText>
             <Link href="/3rd" passHref>
-              <Button text="지원하기" variant="large" />
+              <a>
+                <Button text="지원하기" variant="large" />
+              </a>
             </Link>
             <S.DownArrowWrapper>
               <S.DownArrowIcon />
