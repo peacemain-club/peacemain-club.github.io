@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import GithubSVG from 'public/assets/icons/github.svg';
+
 export const Container = styled.footer`
   display: flex;
   flex-direction: row;
@@ -18,6 +20,11 @@ export const Container = styled.footer`
 
 export const Logo = styled.div`
   height: 20px;
+`;
+
+export const GithubIcon = styled(GithubSVG)`
+  width: 24px;
+  height: 24px;
 `;
 
 export const CopyRight = styled.div`

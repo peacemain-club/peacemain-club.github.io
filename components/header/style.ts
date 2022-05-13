@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import PeacemainSVG from 'public/assets/images/peacemain.svg';
+
 export const Container = styled.header`
   display: flex;
   flex-direction: row;
@@ -19,7 +21,7 @@ export const Container = styled.header`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled(PeacemainSVG)`
   height: 20px;
 `;
 

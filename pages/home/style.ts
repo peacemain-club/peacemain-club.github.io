@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+import DownArrowSVG from 'public/assets/icons/down-arrow.svg';
+import WebSVG from 'public/assets/images/web.svg';
+import ProjectSVG from 'public/assets/images/project.svg';
+import DevCommunitySVG from 'public/assets/images/dev-community.svg';
+
 export const Page = styled.div`
   justify-content: center;
 
@@ -74,6 +79,8 @@ export const DownArrowWrapper = styled.div`
   row-gap: 12px;
 `;
 
+export const DownArrowIcon = styled(DownArrowSVG)``;
+
 export const DescriptionSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -112,3 +119,9 @@ export const DescriptionText = styled.p`
 
   margin: 16px 0;
 `;
+
+export const WebIcon = styled(WebSVG)``;
+
+export const ProjectIcon = styled(ProjectSVG)``;
+
+export const CommunityIcon = styled(DevCommunitySVG)``;

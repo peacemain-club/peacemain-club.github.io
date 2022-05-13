@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import NavButton from 'components/nav-button';
 
 import * as S from './style';
-import peacemain_icon from 'public/assets/images/peacemain.svg';
 
 import type {NextComponentType} from 'next';
 
@@ -12,9 +10,7 @@ const Header: NextComponentType = () => {
   return (
     <S.Container>
       <Link href="/" passHref>
-        <S.Logo>
-          <Image src={peacemain_icon} alt="peacemain" />
-        </S.Logo>
+        <S.Logo />
       </Link>
       <S.NavButtonGroup>
         <S.NavButtonWrapper>

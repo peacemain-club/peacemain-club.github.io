@@ -1,15 +1,10 @@
 import {useRouter} from 'next/router';
-import Image from 'next/image';
 
 import Layout from 'components/layout';
 import Button from 'components/button';
 import ParticleBackground from 'components/particle-background';
 
 import * as S from './style';
-import down_arrow_icon from 'public/assets/icons/down-arrow.svg';
-import web_phrase from 'public/assets/images/web.svg';
-import project_phrase from 'public/assets/images/project.svg';
-import dev_community_phrase from 'public/assets/images/dev-community.svg';
 
 import type {NextPage} from 'next';
 
@@ -35,13 +30,13 @@ const Home: NextPage = () => {
             <S.OnboardText>누구보다 열심히 할 자신이 있다면</S.OnboardText>
             <Button text="지원하기" variant="large" onClick={handleNavToApply} />
             <S.DownArrowWrapper>
-              <Image src={down_arrow_icon} alt="scroll to down" />
+              <S.DownArrowIcon />
               SCROLL
             </S.DownArrowWrapper>
           </S.OnboardSection>
           <S.DescriptionSection>
             <S.DescriptionGroup>
-              <Image src={web_phrase} alt="web" />
+              <S.WebIcon />
               <S.DescriptionTitle>웹서비스를 개발하는 방법을 배웁니다.</S.DescriptionTitle>
               <S.DescriptionText>
                 브라우저에서 실행되는 웹서비스의 프론트엔드를 개발하는 방법을 배웁니다. 기초가 되는 VanillaJS를
@@ -50,7 +45,7 @@ const Home: NextPage = () => {
               </S.DescriptionText>
             </S.DescriptionGroup>
             <S.DescriptionGroup>
-              <Image src={project_phrase} alt="project" />
+              <S.ProjectIcon />
               <S.DescriptionTitle>개발자들의 프로젝트를 지향합니다.</S.DescriptionTitle>
               <S.DescriptionText>
                 개발자에게 무엇보다도 중요한 개발 실력을 위해 프로젝트를 적극적으로 수행합니다. 자유롭게 협업하며 개발
@@ -59,7 +54,7 @@ const Home: NextPage = () => {
               </S.DescriptionText>
             </S.DescriptionGroup>
             <S.DescriptionGroup>
-              <Image src={dev_community_phrase} alt="dev community" />
+              <S.CommunityIcon />
               <S.DescriptionTitle>대구의 개발자를 위한 모임입니다.</S.DescriptionTitle>
               <S.DescriptionText>
                 대구에서 찾기 힘든 현직 개발자 선배와의 교류를 통해 조언을 얻을 수도 있고, 같은 회원들 간의 교류로
