@@ -43,7 +43,7 @@ function InterviewScheduler({schedule}: InterviewSchdulerProps) {
               <S.TimeTableRowTitle>{dayjs(date).format('M월 D일')}</S.TimeTableRowTitle>
               <S.TimeTableRowItems>
                 {times.map(({time, isReserved, isMine}) => {
-                  const is_selected = time === selected_time;
+                  const is_selected = time === selected_time && !isReserved;
 
                   return (
                     <S.TimeTableRowItem
