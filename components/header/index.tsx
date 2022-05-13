@@ -10,7 +10,9 @@ const Header: NextComponentType = () => {
   return (
     <S.Container>
       <Link href="/" passHref>
-        <S.Logo />
+        <a>
+          <S.Logo />
+        </a>
       </Link>
       <S.NavButtonGroup>
         <S.NavButtonWrapper>

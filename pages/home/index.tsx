@@ -1,4 +1,4 @@
-import {useRouter} from 'next/router';
+import Link from 'next/link';
 
 import Layout from 'components/layout';
 import Button from 'components/button';
@@ -9,12 +9,6 @@ import * as S from './style';
 import type {NextPage} from 'next';
 
 const Home: NextPage = () => {
-  const router = useRouter();
-
-  const handleNavToApply = () => {
-    router.push('/3rd');
-  };
-
   return (
     <Layout>
       <S.Page>
@@ -28,7 +22,9 @@ const Home: NextPage = () => {
             <S.OnboardDateText>5.16 - 5.21 18:00</S.OnboardDateText>
             <S.OnboardText>개발자로 가는 길에 가속 페달을 밟고 싶다면</S.OnboardText>
             <S.OnboardText>누구보다 열심히 할 자신이 있다면</S.OnboardText>
-            <Button text="지원하기" variant="large" onClick={handleNavToApply} />
+            <Link href="/3rd" passHref>
+              <Button text="지원하기" variant="large" />
+            </Link>
             <S.DownArrowWrapper>
               <S.DownArrowIcon />
               SCROLL
