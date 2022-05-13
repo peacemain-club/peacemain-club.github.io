@@ -18,8 +18,8 @@ function ThirdBanner({link}: ThirdBannerProps) {
 
   return (
     <S.BannerWrapper>
-      <S.BannerTitle>피스메인 3기 모집</S.BannerTitle>
-      <S.BannerTime>4.25 - 5.1 18:00</S.BannerTime>
+      <S.BannerTitle>피스메인 모집</S.BannerTitle>
+      <S.BannerTime>5.16 - 5.21 18:00</S.BannerTime>
       {link && <Button text="지원서 작성하기" variant="large" onClick={handleNavToApply} />}
     </S.BannerWrapper>
   );

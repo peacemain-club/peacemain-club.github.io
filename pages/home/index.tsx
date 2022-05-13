@@ -26,11 +26,11 @@ const Home: NextPage = () => {
         <S.Main>
           <S.OnboardSection>
             <ParticleBackground />
-            <S.OnboardTitle>피스메인 3기 모집</S.OnboardTitle>
+            <S.OnboardTitle>피스메인 모집</S.OnboardTitle>
             <S.OnboardSubtitle>프론트엔드 개발 교육 트랙</S.OnboardSubtitle>
             <S.OnboardSubtitle>프로젝트 트랙</S.OnboardSubtitle>
             <S.OnboardSubtitle>커뮤니티 매니저</S.OnboardSubtitle>
-            <S.OnboardDateText>4.25 - 5.1 18:00</S.OnboardDateText>
+            <S.OnboardDateText>5.16 - 5.21 18:00</S.OnboardDateText>
             <S.OnboardText>개발자로 가는 길에 가속 페달을 밟고 싶다면</S.OnboardText>
             <S.OnboardText>누구보다 열심히 할 자신이 있다면</S.OnboardText>
             <Button text="지원하기" variant="large" onClick={handleNavToApply} />
